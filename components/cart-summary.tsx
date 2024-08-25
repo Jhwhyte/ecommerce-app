@@ -5,7 +5,7 @@ import { Loader2 } from "lucide-react"
 import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
 
 import { Button } from "@/components/ui/button"
-
+...
 export function CartSummary() {
   const { formattedTotalPrice, totalPrice, cartDetails, cartCount, redirectToCheckout} = useShoppingCart()
   const [isLoading, setLoading] = useState(false)

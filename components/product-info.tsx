@@ -48,7 +48,7 @@ export function ProductInfo({ product}: Props) {
 
       <div className="mt-3">
         <h2 className="sr-only">Product information</h2>
-        <p className="text-3xl tracking-tight">{formatCurrencyString({ value: product.price / 100, currency: product.currency})}</p>
+        <p className="text-3xl tracking-tight">{formatCurrencyString({ value: product.price, currency: product.currency})}</p>
       </div>
 
       <div className="mt-6">

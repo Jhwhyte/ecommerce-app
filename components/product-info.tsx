@@ -33,7 +33,7 @@ export function ProductInfo({ product}: Props) {
       description: "Product added to cart",
       action: (
         <Link href='/cart'>
-            <Button variant="link" className="gap-x-2 whitespace-nonwrap">
+            <Button variant="link" className="p-4 text-sm font-medium rounded-lg bg-gray-100 hover:bg-gray-200">
               <span>Open cart</span>
               <ArrowRight className="h-5 w-5" />
             </Button>
@@ -61,7 +61,7 @@ export function ProductInfo({ product}: Props) {
           Size: <strong>{getSizeName(selectedSize)}</strong>
         </p>
         {product.sizes.map((size) => (
-          <Button onClick = {() => setSelectedSize(size)} key={size} variant={selectedSize == size ? 'default' : 'outline'} className="mr-2 mt-4">
+          <Button onClick = {() => setSelectedSize(size)} key={size} variant={selectedSize == size ? 'default' : 'outline'} className="mt-4 mr-2">
             {getSizeName(size)}
           </Button>
         ))}
@@ -72,7 +72,7 @@ export function ProductInfo({ product}: Props) {
           <Button
             type="button"
             onClick={addToCart}
-            className="w-full bg-violet-600 py-6 text-base font-medium text-white hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
+            className="w-full py-6 text-base font-medium text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
           >
             Add to cart
           </Button>

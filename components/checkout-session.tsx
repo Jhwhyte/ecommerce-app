@@ -9,13 +9,14 @@ interface Props {
   customerDetails: Stripe.Checkout.Session.CustomerDetails | null
 }
 
-export function CheckoutSession( {customerDetails }: Props ) {
+export function CheckoutSession({ customerDetails }: Props) {
   const { clearCart } = useShoppingCart()
 
   useEffect(() => {
-    if (customerDetails){
+    if (customerDetails) {
       clearCart()
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [customerDetails])
 
   if (!customerDetails) {
